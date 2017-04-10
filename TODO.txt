@@ -1,0 +1,47 @@
+iofel.me/wh
+
+explain:
+- hosting
+    - not going to teach HTML
+    - you have an html page
+    - you can see it on your own computer, file:///
+    - want to put it on the internet
+    - web server
+    - types of hosting
+        - you can host on your own computer
+            - it has to be always on
+            - you need a public IP / port forward
+        so... use a server that is always on
+        - *your* files on *someone else's* computer
+        - file-based / static i.e. github pages
+            - html/css, no PHP, node.js, python, etc...
+        - hosted solutions
+            - e.g. wordpress
+                - you get admin access to the website, don't have to worry about php
+        - cpanel, etc.
+            - you don't get SSH access but you can point and click to upload (FTP) and create databases
+        - VPS
+            - plain old linux box
+            - run any software including PHP, databases, etc..
+            - not that hard
+- domains
+    - ip
+    - dns
+    - registrar
+
+host on github pages
+- do github pages before domain because of DNS propogation time
+
+register domain
+- only .me is free
+- https://nc.me
+- go to email
+- login or register
+- confirm order
+- don't setup github account
+- namecheap.com
+- domain -> DNS settings
+- automatically set to github's IP
+- new github repo
+- gh-pages branch
+- make it the default

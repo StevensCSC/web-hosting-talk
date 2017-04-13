@@ -40,10 +40,10 @@
 				<section>
 					<p>Local HTML Files</p>
 					<ul>
-						<li>File stored on your computer</li>
-						<li>Other people can't access it</li>
+						<li class="fragment">File stored on your computer</li>
+						<li class="fragment">Other people can't access it</li>
 					</ul>
-					<div>
+					<div class="fragment">
 						<img src="local.png" />
 					</div>
 					<aside class="notes">
@@ -56,11 +56,17 @@
 				<section>
 					<h2>Web Servers</h2>
 					<ul>
-						<li><code>file://</code> - read from the disk</li>
-						<li><code>http://</code> - speak HTTP to a server</li>
-						<li>web server - program which speaks HTTP</li>
-						<li>nginx</li>
-						<li>apache</li>
+						<li class="fragment"><code>file://</code> - read from the disk</li>
+						<li class="fragment"><code>http://</code> - speak HTTP to a server</li>
+						<li class="fragment">web server - program which speaks HTTP</li>
+						<li class="fragment">nginx</li>
+						<li class="fragment">apache</li>
+						<li class="fragment">
+							<a href="https://caddyserver.com/">caddy</a>
+							<ul>
+								<li><a href="https://letsencrypt.org">letsencrypt</a></li>
+							</ul>
+						</li>
 					</ul>
 					<aside class="notes">
 						When a browser sees 'file://', it knows to go to your hard drive and open that file.
@@ -72,9 +78,9 @@
 				<section>
 					<h2>Hosting on your Computer</h2>
 					<ul>
-						<li>You can run a web server on your computer</li>
-						<li>Public access: static IP &amp; port forwarding</li>
-						<li>Always on</li>
+						<li class="fragment">You can run a web server on your computer</li>
+						<li class="fragment">Public access: static IP &amp; port forwarding</li>
+						<li class="fragment">Always on</li>
 					</ul>
 					<aside class="notes">
 						You can host files from your computer if you run a web server (such as nginx).
@@ -85,10 +91,10 @@
 				<section>
 					<h2>Static hosting</h2>
 					<ul>
-						<li>Just upload files</li>
-						<li>No maintenance</li>
-						<li>GitHub Pages, Amazon S3, Dropbox</li>
-						<li>No dynamic sites</li>
+						<li class="fragment">Just upload files</li>
+						<li class="fragment">No maintenance</li>
+						<li class="fragment">GitHub Pages, Amazon S3, Dropbox</li>
+						<li class="fragment">No dynamic sites</li>
 					</ul>
 					<aside class="notes">
 						The simplest solution is to use static hosting. You just have to upload files to a service. We'll be using Github Pages. No maintance required, no need to configure a web server. Tradeoff: you can't use dynamic sites written in PHP or Python (you can do a lot with javascript on the client side these days).
@@ -97,8 +103,8 @@
 				<section>
 					<h2>Hosted Services</h2>
 					<ul>
-						<li>No maintence</li>
-						<li>wordpress.org</li>
+						<li class="fragment">No maintence</li>
+						<li class="fragment">wordpress.org</li>
 					</ul>
 					<aside class="notes">
 						The next step up is a hosted service. You can run things like wordpress. You don't have to install software or manage a server but you still get full admin access.
@@ -107,11 +113,11 @@
 				<section>
 					<h2>Shared Hosting</h2>
 					<ul>
-						<li>Some maintenance</li>
-						<li>Upload files via FTP</li>
-						<li>Create databases</li>
-						<li>Usually PHP</li>
-						<li>GoDaddy, HostGator</li>
+						<li class="fragment">Some maintenance</li>
+						<li class="fragment">Upload files via FTP</li>
+						<li class="fragment">Create databases</li>
+						<li class="fragment">Usually PHP</li>
+						<li class="fragment">GoDaddy, HostGator</li>
 					</ul>
 					<aside class="notes">
 						Shared hosting is a popular option. You can upload your files, configure your site, and create databases through a web interface.
@@ -123,9 +129,9 @@
 				<section>
 					<h2>PaaS</h2>
 					<ul>
-						<li>Heroku</li>
-						<li>pythonanywhere.com</li>
-						<li>You write code, don't worry about infrastructure</li>
+						<li class="fragment"><a href="https://heroku.com">Heroku</a></li>
+						<li class="fragment"><a href="https://www.pythonanywhere.com">pythonanywhere.com</a></li>
+						<li class="fragment">You write code, don't worry about infrastructure</li>
 					</ul>
 					<aside class="notes">
 						One option for dynamic websites is to use PaaS services. It's pretty similar to shared hosting. You generally have better support for different programming languages. They are responsible for installing Python or Java and you can just upload your code.
@@ -134,11 +140,11 @@
 				<section>
 					<h2>IaaS</h2>
 					<ul>
-						<li>VPS (shared) or dedicated server</li>
-						<li>You have to do maintenance</li>
-						<li>You have to install a web server, database, etc...</li>
-						<li>Full control</li>
-						<li>Amazon EC2, DigitalOcean, Linode, ...</li>
+						<li class="fragment">VPS (shared) or dedicated server</li>
+						<li class="fragment">You have to do maintenance</li>
+						<li class="fragment">You have to install a web server, database, etc...</li>
+						<li class="fragment">Full control</li>
+						<li class="fragment">Amazon EC2, DigitalOcean, Linode, ...</li>
 					</ul>
 					<aside class="notes">
 						The last option is infrastructure as a service. You get a linux machine that you can ssh into. With a VPS (virtual private server), the hardware is shared with other customers but you still get root access. Or you can get a fully dedicated server.
@@ -147,13 +153,16 @@
 				</section>
 				<section>
 					<h1>Domains</h1>
+					<aside class="notes">
+						That's it for hosting. Any questions?
+					</aside>
 				</section>
 				<section>
 					<h2>IP Address</h2>
 					<ul>
-						<li>You can access any server via its IP address</li>
-						<li>http://155.246.21.100 shows stevens.edu</li>
-						<li>Not user friendly</li>
+						<li class="fragment">You can access any server via its IP address</li>
+						<li class="fragment">http://155.246.21.100 shows stevens.edu</li>
+						<li class="fragment">Not user friendly</li>
 					</ul>
 					<aside class="notes">
 						Not the most user friendly, so we use domain names.
@@ -162,9 +171,9 @@
 				<section>
 					<h2>Domain Name</h2>
 					<ul>
-						<li>google.com, stevens.edu</li>
-						<li>TLDs: .com, .net</li>
-						<li><a href="https://iwantmyname.com/domains/new-gtld-domain-extensions">New TLDs</a> such as .ninja, .wtf</li>
+						<li class="fragment">google.com, stevens.edu</li>
+						<li class="fragment">TLDs: .com, .net</li>
+						<li class="fragment"><a href="https://iwantmyname.com/domains/new-gtld-domain-extensions">New TLDs</a> such as .ninja, .wtf</li>
 					</ul>
 					<img src="https://raventools.com/marketing-glossary/wp-content/uploads/2016/02/URL_Parts.png" />
 					<aside class="notes">
@@ -175,9 +184,9 @@
 				<section>
 					<h2>DNS</h2>
 					<ul>
-						<li>Translate domain names to IP addresses</li>
-						<li>purple.com &rarr; 153.104.63.227</li>
-						<li>We need to get our domain into the DNS system</li>
+						<li class="fragment">Translate domain names to IP addresses</li>
+						<li class="fragment">purple.com &rarr; 153.104.63.227</li>
+						<li class="fragment">We need to get our domain into the DNS system</li>
 					</ul>
 					<aside class="notes">
 						To actually convert a domain name to an IP address, programs use DNS.
@@ -186,9 +195,9 @@
 				<section>
 					<h2>Domain Registrars</h2>
 					<ul>
-						<li>Buy domains</li>
-						<li>Takes up to 24 hours to propogate</li>
-						<li>NameCheap, GoDaddy</li>
+						<li class="fragment">Buy domains</li>
+						<li class="fragment">Takes up to 24 hours to propogate</li>
+						<li class="fragment">NameCheap, GoDaddy</li>
 					</ul>
 					<aside class="notes">
 						To buy a domain name you have to go to a domain registrar. Once you buy a domain you can change DNS settings to point to your server/hosting.
